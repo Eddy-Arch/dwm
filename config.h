@@ -40,7 +40,7 @@ static const Rule rules[] = {
 //	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,         0,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,         0,        -1 },
+	{ "Firefox",  NULL,       NULL,       0,       0,           0,         0,        -1 },
 	{ "st",       NULL,       NULL,       0,            0,           1,         1,        -1 },
 };
 
@@ -185,7 +185,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_t,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,                       XK_f,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY|ShiftMask|ControlMask,                       XK_f,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[11]} },
