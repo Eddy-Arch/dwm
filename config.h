@@ -99,6 +99,7 @@ static const char *volup[] = {"mpc","volume","+2", NULL };
 static const char *voldown[] = {"mpc","volume","-2", NULL };
 static const char *flameshot[] = {"flameshot","gui", NULL };
 static const char *chromium[] = {"chromium", NULL };
+static const char *songchoose[] = {"songchoose.sh", NULL };
 
 
 /*
@@ -166,6 +167,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,                       XK_i,      spawn,          {.v = volup} },	
 	{ MODKEY|ShiftMask,                       XK_h,      spawn,          {.v = pausesong} },	
 	{MODKEY|ShiftMask,                       XK_s,      spawn,          {.v = flameshot} }, 
+	{MODKEY|ShiftMask,                       XK_p,      spawn,          {.v = songchoose} }, 
 	{ MODKEY|ShiftMask,                       XK_k,      spawn,          {.v = next} },
 	{ MODKEY|ShiftMask,                       XK_d,      spawn,          {.v = discord} },
 	{ MODKEY,                       XK_w,      spawn,          {.v = chromium} },
@@ -174,10 +176,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Right,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_Down,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_Up,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_k,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_j,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
