@@ -99,7 +99,7 @@ static const char *volup[] = {"mpc","volume","+2", NULL };
 static const char *voldown[] = {"mpc","volume","-2", NULL };
 static const char *flameshot[] = {"flameshot","gui", NULL };
 static const char *chromium[] = {"chromium", NULL };
-static const char *chromium_incognito[] = {"chromium --incognito", NULL };
+static const char *chromium_incognito[] = {"chromium", "--incognito", NULL };
 static const char *songchoose[] = {"songchoose.sh", NULL };
 
 
