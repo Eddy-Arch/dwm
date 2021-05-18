@@ -99,6 +99,7 @@ static const char *volup[] = {"mpc","volume","+2", NULL };
 static const char *voldown[] = {"mpc","volume","-2", NULL };
 static const char *flameshot[] = {"flameshot","gui", NULL };
 static const char *chromium[] = {"chromium", NULL };
+static const char *chromium_incognito[] = {"chromium --incognito", NULL };
 static const char *songchoose[] = {"songchoose.sh", NULL };
 
 
@@ -171,6 +172,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,                       XK_k,      spawn,          {.v = next} },
 	{ MODKEY|ShiftMask,                       XK_d,      spawn,          {.v = discord} },
 	{ MODKEY,                       XK_w,      spawn,          {.v = chromium} },
+	{ MODKEY|ShiftMask,                       XK_w,      spawn,          {.v = chromium_incognito} },
 	{ MODKEY|ControlMask|ShiftMask,     XK_Return,      spawn,          {.v = tabbedst} },
 	{ MODKEY,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
